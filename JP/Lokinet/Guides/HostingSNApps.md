@@ -18,7 +18,7 @@ description: SNAppの機能は現在栄えているTorのいわゆる「秘匿�
 
 DebパッケージからLokinetをビルドした場合、以下のコマンドで「lokinet.ini」ファイルを見つけられます：
 ```
-sudo nano ~/etc/loki/lokinet.ini
+sudo nano /etc/loki/lokinet.ini
 ```
 もしくは、ソースからビルドした場合は「lokinet.ini」ファイルは以下のファルダーに見つけれます：
 ```
@@ -46,10 +46,10 @@ sudo systemctl restart lokinet
 nslookup -type=cname localhost.loki 127.0.0.1 
 ```
 
-Linuxでは、「dig」コマンドも使えます。クエリーに行うlokiアドレスは同じですが、他のインストールされているリゾルバーとのコンフリクトをよけるためリゾルバーは「127.3.2.1」というアドレスを利用します。
+Linuxでは、「host」コマンドも使えます。クエリーに行うlokiアドレスは同じですが、他のインストールされているリゾルバーとのコンフリクトをよけるためリゾルバーは「127.3.2.1」というアドレスを利用します。
 
 ```
-dig @127.3.2.1 -t cname localhost.loki
+host -t cname localhost.loki 127.3.2.1
 ```
 
 ## 3. SNAppを作る
