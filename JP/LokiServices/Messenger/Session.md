@@ -30,4 +30,4 @@ description: Lokiネットワークに初めて実施されたサービスは「
 
 最後に、セッションではアカウント作成がメールアドレスや電話番号を必要としません。その代わりに、[匿名の公開鍵システム](../infrastructure/#identity-and-long-term-keys)をアカウント識別のための基準として使用します。
 
-![OnlineMessaging](../../docs/assets/sessionmockup.png)
+![OnlineMessaging](../../../docs/assets/sessionmockup.png)
