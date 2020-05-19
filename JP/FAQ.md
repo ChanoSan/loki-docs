@@ -27,7 +27,7 @@ description: Lokiとは？　Lokiにはマスターノードはありますか�
 
 * [プレマインについての詳細を教えてもらえますか？](#can-i-see-details-about-the-premine)
 
-* [どうして5%のガバナンス報酬があるのですか？](#why-is-there-a-5-governance-reward)
+* [どうして10%のガバナンス報酬があるのですか？](#why-is-there-a-5-governance-reward)
 
 * [マイニングのブロック報酬とは何ですか？](#what-is-the-block-reward-for-mining)
 
