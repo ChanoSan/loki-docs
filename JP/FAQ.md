@@ -25,8 +25,6 @@ description: Lokiとは？　Lokiにはマスターノードはありますか�
 
 * [モネロのソースコードへお返しにコミットするつもりはありますか？](#will-you-guys-commit-back-to-the-monero-source-code)
 
-* [モネロと何が違いますか？](#whats-the-difference-from-monero)
-
 * [プレマインについての詳細を教えてもらえますか？](#can-i-see-details-about-the-premine)
 
 * [どうして5%のガバナンス報酬があるのですか？](#why-is-there-a-5-governance-reward)
@@ -119,6 +117,8 @@ Lokiは[プルーフ・オブ・ワーク](https://ja.wikipedia.org/wiki/%E3%83%
 
 中核通貨へのアプローチにわずかな変化以外に、多様な機能を果たす[サービスノード](../ServiceNodes/SNOverview)ネットワークを実行します。その機能は[匿名ネットワーク層](../Lokinet/LLARP)、[Blink](../LokiServices/Blink)というシステムによって管理者が存在しない定足数に基づく瞬間取引、そして例えば[プライベート・メッセージング](../LokiServices/Messenger)を確保するなどのためにネットワーク層を活用する様々な機能を含みます。
 
+最小10 mixinの[一定リング署名サイズ](/Advanced/CryptoNoteElements/#ring-signature-size)、[コミュニティープロジェクトや開発を財政支援する](/Governance/LokiFundingSystem)5%の[ガバナンスブロック報酬](/Advanced/Cryptoeconomics/#block-reward-split)、そして[通貨発行速度曲線(emission curve)](/Advanced/Cryptoeconomics/#loki-block-reward)の変更。Lokiをモネロと区別しているベースレイヤー変更はありますが、主な違いは第2レイヤーの奨励されてる[サービスノード](../ServiceNodes/SNOverview)、[Lokiサービス](/LokiServices/LokiServicesOverview)、そして[Lokinet](../ServiceNodes/SNOverview)です。
+
 ### **どんな人達がLokiネットワークを使いますか？**
 
 Lokiはプライベートな取引、そして通信機能を与えますので、そのユースケースはコミュニケーションに関する最高のプライバシーが欲しい方々に訴えかけることでしょう。[SNApp](../Lokinet/SNApps)開発の拡大につれて、Lokiはプライバシー中心のアプリケーションが実行する理想のネットワークに発展すると思われます。
@@ -139,17 +139,13 @@ Lokiはネットワークによって提供される奨励構造に基づいて�
 
 最適化、バグ修正、新機能などの役立つ変更をお返しにモネロに提供するつもりです。
 
-### **モネロと何が違いますか？**
-
-最小10 mixinの[一定リング署名サイズ](/Advanced/CryptoNoteElements/#ring-signature-size)、[コミュニティープロジェクトや開発を財政支援する](/Governance/LokiFundingSystem)5%の[ガバナンスブロック報酬](/Advanced/Cryptoeconomics/#block-reward-split)、そして[通貨発行速度曲線(emission curve)](/Advanced/Cryptoeconomics/#loki-block-reward)の変更。Lokiをモネロと区別しているベースレイヤー変更はありますが、主な違いは第2レイヤーの奨励されてる[サービスノード](../ServiceNodes/SNOverview)、[Lokiサービス](/LokiServices/LokiServicesOverview)、そして[Lokinet](../ServiceNodes/SNOverview)です。
-
 ### **プレマインについての詳細を知ることはできますか？**
 
 はい、[プレマイン報告書](https://loki.network/loki-premine-report/) をご覧ください。
 
-### **どうして5%のガバナンス報酬がありますか？**
+### **どうして10%のガバナンス報酬がありますか？**
 
-ユーザーが開発の資金調達は外力によって悪影響を与えられないという確信があるように、[自己資金によるシステム](../Governance/LokiFundingSystem)を作る意向です。5%ブロック報酬はそのためにガバナンス・ウォレットへ送られます。
+ユーザーが開発の資金調達は外力によって悪影響を与えられないという確信があるように、[自己資金によるシステム](../Governance/LokiFundingSystem)を作る意向です。10%ブロック報酬はそのためにガバナンス・ウォレットへ送られます。
 
 他のプロジェクトと似たような方法です。例えば、始めの4年間20%ブロック報酬をもらうZCash財団、あるいはネットワークから10%ブロック報酬をもらうDASHプロジェクト。
 
@@ -159,7 +155,7 @@ Lokiはネットワークによって提供される奨励構造に基づいて�
 
 ### **マイニングのブロック報酬とは何ですか？**
 
-正確なブロック報酬情報を[www.lokiblocks.com](https://www.lokiblocks.com) で入手できます。ブロック報酬の配分は以下のように計算されます：サービスノードへ50%、マイナーへ45%、そしてガバナンス・プールへ5%。ブロック報酬の配分について、詳しくは[ここ](../Advanced/Cryptoeconomics/#block-reward-split)から。
+正確なブロック報酬情報を[www.lokiblocks.com](https://www.lokiblocks.com) で入手できます。ブロック報酬の配分は以下のように計算されます：サービスノードへ66%、マイナーへ24%、そしてガバナンス・プールへ10%。ブロック報酬の配分について、詳しくは[ここ](../Advanced/Cryptoeconomics/#block-reward-split)から。
 
 ### **ブロック生成時間はどれ程かかりますか？**
 
