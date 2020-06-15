@@ -74,7 +74,7 @@ GUIクライアントへアクセスするには、lokinet-guiアプリを開く
 
 ただ、lokinet-guiクライアントを開いて、パワーボタンをクリックするだけです。
 
-![lokinet-gui](../../docs/assets/lokinetGui.PNG)
+![lokinet-gui](../../../docs/assets/lokinetGui.PNG)
 
 
 ## プライベートのままでLokinetを閲覧しましょう
