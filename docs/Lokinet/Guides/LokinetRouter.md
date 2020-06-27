@@ -22,13 +22,13 @@ it is possible to do everything as root, it is strongly recommended that you cre
 on our VPS by running the following command:
 
 ```
-adduser <username>
+sudo adduser <username>
 ```
 
 Replacing `<username>` with a name you will log-in with. For this user-guide we will use `lokinetRouter` as our username.
 
 ```
-adduser lokinetRouter
+sudo adduser lokinetRouter
 ```
 
 The terminal will prompt you for a new password for our newly created user. Use a secure password that is different password from the root password.
@@ -38,7 +38,7 @@ Once the password has been set, the terminal will prompt for a few details about
 Once that’s done, run the following two commands to give our new account admin privileges and to change to such account.
 
 ```
-usermod -aG sudo lokinetRelay
+sudo usermod -aG sudo lokinetRelay
 ```
 
 ```
@@ -122,11 +122,11 @@ sudo systemctl stop lokinet-router
 ## Express Setup Guide
 
 ```
-adduser lokinetRouter
+sudo adduser lokinetRouter
 ```
 
 ```
-usermod -aG sudo lokinetRelay
+sudo usermod -aG sudo lokinetRelay
 ```
 
 ```
