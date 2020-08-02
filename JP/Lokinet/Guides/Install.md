@@ -19,7 +19,7 @@ description: このガイドは、Linuxでソースコードからバイナリ�
 sudo adduser <username>
 ```
 
-'<username>'を好みの名前に置き換えて下さい。このガイドのため、ユーザ名を仮に「lokitestnet」にします。
+'username'を好みの名前に置き換えて下さい。このガイドのため、ユーザ名を仮に「lokitestnet」にします。
 
 同じユーザー名を使うのだとしたら、コマンドを実行してください。：
 
