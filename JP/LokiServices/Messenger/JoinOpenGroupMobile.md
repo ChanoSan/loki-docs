@@ -5,16 +5,16 @@ description: セッションにおいて、オープングループはコミュ�
 
 * 地球儀アイコンをタップする。
 
-![alt text](../../docs/assets/JoingroupMobile1.png "スマホでオープングループに参加: ステップ 1")
+![alt text](../../../docs/assets/JoingroupMobile1.png "スマホでオープングループに参加: ステップ 1")
 
 * 参加したいオープングループのアドレス（URL)を入力する _(アドレスの初めに「https://」もお忘れなく！)_
 
-![alt text](../../docs/assets/JoingroupMobile2.png "スマホでオープングループに参加: ステップ 2")
+![alt text](../../../docs/assets/JoingroupMobile2.png "スマホでオープングループに参加: ステップ 2")
 
 * 「next」をタップする。
 
-![alt text](../../docs/assets/JoingroupMobile3.png "スマホでオープングループに参加: ステップ 3")
+![alt text](../../../docs/assets/JoingroupMobile3.png "スマホでオープングループに参加: ステップ 3")
 
 * セッションにおいて、新しいコミュニティーの一員として楽しもう！
 
-![alt text](../../docs/assets/JoingroupMobile4.png "スマホでオープングループに参加: ステップ 4")
+![alt text](../../../docs/assets/JoingroupMobile4.png "スマホでオープングループに参加: ステップ 4")
