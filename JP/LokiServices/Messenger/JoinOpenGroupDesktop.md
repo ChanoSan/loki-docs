@@ -5,20 +5,20 @@ description: セッションにおいて、オープングループはコミュ�
 
 * サイドバーにある地球儀アイコンをクリックする：
 
-  ![Step 1](../../docs/assets/Desktop1.png "デスクトップでオープングループに参加: ステップ 1")
+  ![Step 1](../../../docs/assets/Desktop1.png "デスクトップでオープングループに参加: ステップ 1")
 
 * 「Join Open Group」をクリックする：
 
-  ![Step 2](../../docs/assets/Desktop2.png "デスクトップでオープングループに参加: ステップ 2")
+  ![Step 2](../../../docs/assets/Desktop2.png "デスクトップでオープングループに参加: ステップ 2")
 
 * 参加したいオープングループのアドレス（URL)を入力する：
 
-  ![Step 3](../../docs/assets/Desktop3.png "デスクトップでオープングループに参加: ステップ 3")
+  ![Step 3](../../../docs/assets/Desktop3.png "デスクトップでオープングループに参加: ステップ 3")
 
 * 「Join Open Group」をクリックする：
 
-  ![Step 4](../../docs/assets/Desktop4.png "デスクトップでオープングループに参加: ステップ 4")
+  ![Step 4](../../../docs/assets/Desktop4.png "デスクトップでオープングループに参加: ステップ 4")
 
 * セッションにおいて、新しいコミュニティーの一員として楽しもう！
 
-  ![Step 5](../../docs/assets/Desktop5.png "デスクトップでオープングループに参加: ステップ 5")
+  ![Step 5](../../../docs/assets/Desktop5.png "デスクトップでオープングループに参加: ステップ 5")
