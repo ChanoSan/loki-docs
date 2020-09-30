@@ -35,18 +35,3 @@ Lokinet-win32.exeをインストーラーを実行して、促されるとおり
 
 ![Lokinet-launcher2](../../../docs/assets/lokinet-launcher2.PNG)
 
----
-
-## トラブルシューティング
-
-### 再ブートストラップ
-
-ブートストラップエラーコードが表示されたら、「設定」画面から「ウェブからのブートストラップ・クライアント...」を選択して、以下のURLを張り付けてください。
-
-```
-https://seed.lokinet.org/bootstrap.signed
-```
-
-![ブートストラップ](../../../docs/assets/bootstrap.jpg)
-
-「OK」をクリックして、そしてLokinetと再接続します。
