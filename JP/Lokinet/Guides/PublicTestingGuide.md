@@ -96,8 +96,6 @@ Lokinetをインストールするから[SNApp](../../Lokinet/SNApps.md) をホ�
 
 - 初めてLokinetを初期化する。
 
-- `./lokinet`を実行する。
-
 - 初めてSNAppをアクセスする。
 
 ガイドに従って、遭遇した問題を[discord](https://discord.gg/67GXfD6) の#lokinet-helpチャンネルでモデレーターに報告して下さい。問題に遭遇した場合、特にご自身で解決できた際は、[Loki-networkのリポジトリー](https://github.com/loki-project/loki-network/issues) に報告願います。
@@ -111,16 +109,5 @@ Lokinetをインストールするから[SNApp](../../Lokinet/SNApps.md) をホ�
 
 このガイドはSNAppホストする方法を教えます。ガイドをアクセスするには[ここ](../Guides/HostingSNApps.md) にクリックして下さい。
 
-このガイドでは、以下の点を説明します：
-
-- Lokinet公開鍵を見つける。
-
-- 「lokinet.ini」ファイルを編集して永続的なSNAppを有効にする。
-
-- SNAppコードのためのディレクトリーを作成する。
-
-- 「Hello lokinet」が入ってる「index.html」ファイルを作成して、ネットワークに見せる。
-
-- SNAppディレクトリーをLokinetへ送信して、ブラウザでアクセスする。
 
 ガイドに従って、遭遇した問題を[discord](https://discord.gg/67GXfD6) の#lokinet-helpチャンネルでモデレーターに報告して下さい。問題に遭遇する場合、特にご自身で解決できた際は、[Loki-networkのリポジトリー](https://github.com/loki-project/loki-network/issues) に報告願います。
