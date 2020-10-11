@@ -1,119 +1,112 @@
 title: Lokiドキュメンテーション | LokinetのLinuxインストールガイド
 description: このガイドは、Linuxでソースコードからバイナリをビルドする方法を説明します。すでにビルドされたバイナリの場合、lokinet.orgにアクセスしてリリースファイルをダウンロードして下さい。
 
-# LokiNETインストールガイド - Linux
+# Linuxの初期設定
 
-このガイドは、Linuxでソースコードからバイナリをビルドする方法を説明します。すでにビルドされたバイナリの場合、[lokinet.org](https://lokinet.org/) を訪れてリリースファイルをダウンロードして下さい。
+Linuxでのlokinetのインストールは簡単です。
 
-コンパイルするには、利用するプラットフォーム版のLokinetの[最新リリース](https://github.com/loki-project/loki-network/releases) をダウンロードして下さい。
+## debianベースのディストリビューションで
 
-コンパイルエラーに遭遇したら、[ここ](../../../Contributing/Issue_Template/) からのテンプレートを使って、[ここ](https://github.com/loki-project/loki-network/issues) に報告して下さい。
+debianリポジトリを追加する：
 
-## Linuxで最初のセットアップ
-
-### 1. 非ルートユーザの作成
-
-公開サーバーの運営には、ルートユーザとしてソフトウェアを実行しないということが最善の措置です。サーバーに、以下のコマンドで、非ルートユーザを作成します。
-
-```
-sudo adduser <username>
+```bash
+sudo apt update 
+sudo apt install curl 
+curl -s https://deb.loki.network/public.gpg | sudo apt-key add -
+echo "deb https://deb.loki.network $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/loki.list
+apt update
 ```
 
-「username」を好みの名前に置き換えて下さい。このガイドのため、ユーザ名を仮に「lokitestnet」にします。
+...そしてlokinetをインストールする：
 
-同じユーザー名を使うのだとしたら、コマンドを実行してください：
-
-```
-sudo adduser lokitestnet
+```bash
+sudo apt install lokinet
 ```
 
-コマンドが実行されたら、ターミナルは作成されたユーザの新しいパスワードを入力するように求めてきます。ルートユーザと異なるパスワードを使って下さい。
+完了しました。DNSはセットアップされており、いつでも起動する準備が整っています。
 
-パスワードが設定されたら、ターミナルは新しいアカウントに関する詳細を入力するように求めてきます。とはいえ、Lokinetにアクセスするには関係ありませんので、エンターキーを押して各プロンプトを飛ばすこともできます。
+## Linuxミント
 
-それらが完了したら、以下の2つのコマンドを実行してアカウントに管理者権限を与え、使い始めます。
+ミントは初心者にやさしいディストリビューションですが、開発者達はなぜかこれを独特な存在にしたかったみたいで、特殊な命名規則を用いてしまっています。ともかく、ミントの場合は余分な手順と労力が必要です。
 
-```
-sudo usermod -aG sudo lokitestnet
-su - lokitestnet
-```
+[このテーブル](https://linuxmint.com/download_all.php) を参照して、`/etc/apt/sources.list.d/loki.list`にあるミントのリリース名をUbuntuリリース名に置換して下さい。
 
-### 2. パソコン準備
-先ずはパッケージリストをアップデートします。以下のコマンドはリポジトリーからパッケージリストをダウンロードし、最新バージョンやその依存関係についての情報をアップデートします。全てのリポジトリーとPPAはそのようにアップデートされます。
+## 他のディストリビューション
 
-以下のコマンドを実行します：
+ソースからビルドする。
 
-```
-sudo apt-get update
-```
+要件：
 
-様々なパッケージリストがダウンロードされたことに気付くでしょう。ダウンロードが完了したら、以下のコマンドでシステムに現在インストールされるパッケージのアップデートをフェッチしてください。
+* c++17 compiler
+* cmake
+* git
+* pkg-config
+* setcap
+* sqlite3
+* libunbound
+* libuv 1.x
+* zmq
+* libsodium >= 1.0.18 
 
-```
-sudo apt-get upgrade
-```
-
-ディスク領域使用を許可するよう求められます。許可するのためには、「y」を入力してエンター・キーを押します。
-
->注意：利用可能なバージョンのダウンロードを求められたなら、パッケージメンテナのバージョンを選択できるまで上下の矢印キーを押し、エンター・キーを押します。
-
-### 3. 依存関係
-ビルドするための依存関係をインストールする必要があります。以下のコマンドを入力してLokinetが要する依存関係を全てインストールします。
-
-```
-sudo apt install build-essential cmake libcap-dev wget git resolvconf curl libuv1-dev libsodium-dev libcurl4-openssl-dev
-```
+...そしてリポジトリをクローンしてビルドする：
 
 
-依存関係がインストールされたら、loki-networkのリポジトリをクローンします：
-```
-git clone https://github.com/loki-project/loki-network
-cd loki-network
-```
-### 4. 正常な運転のためにビルドする場合
-正常な運転のためにビルドするには、以下の2つのコマンドを実行します：
-
-```
-make
-sudo make install
+```bash
+git clone --recursive https://github.com/loki-project/loki-network
+mkdir loki-network/build
+cd loki-network/build
+cmake ..
+make -j$(nproc)
+sudo make install # このステップは任意ではありません
 ```
 
-### 5. DNSの設定
-次に、resolv.confファイルを編集してDNSリゾルバを追加する必要があります。
+### Lokinetをブートストラップ
 
-以下のコマンドを実行します。
+lokinetをブートストラップするのに、普通のユーザとして以下のコマンドを１回実行する：
+
+```bash
+lokinet -g
+lokinet-bootstrap
+```
+
+そしてlokinetをフォアグラウンドへ普通のユーザーとして実行する：
+
+```bash
+lokinet
+```
+
+### DNS設定
+
+debianパッケージを利用する場合、以下のステップは不必要です。
+
+#### systemd-resolved
+
+systemd-resolvedを利用する場合、`contrib/systemd-resolved/lokinet.conf`を`/etc/systemd/resolve.d.conf/10-lokinet.conf`へコピーして、`sudo systemctl restart systemd-resolved`を実行してsystemd-resolvedを再起動する。
+
+#### resolvconf
+
+systemd-resolvedを利用しない場合、resolveconfを利用する。
+
+以下のコマンドを実行する：
 
 ```
 sudo nano /etc/resolvconf/resolv.conf.d/head
 ```
 
-以下のファイルの最後に追加します：
+以下の行をファイルの最後に追加する：
 
 ```
 nameserver 127.3.2.1
 ```
 
-追加されたら、コントロールキーを押しながらXキーを押します。
-ファイル変更を確認するため、エンターキーを押します。
+追加が完了したら、CTRL-xを押す。
+エンターを押して変更を確認する。
 
-次は、以下のコマンドで/etc/resolv.confファイルをアップデートする必要があります：
+以下のコマンドを実行して/etc/resolv.confファイルをアップデートする：
 
 ```
 sudo resolvconf -u
 ```
-
----
-
-### 任意：　debianパッケージをビルドする方法
-
-debianパッケージが欲しい場合、必要となるdebianメンテナーのパッケージをインストールします...
-
-    $ sudo apt install debuild
-
-...そして以下のコマンドでビルドします
-
-    $ debuild -us -b
----
 ### 完了
 
 おめでとうございます。ガイドをクリアしました。ここから[Lokinetパブリックテストのガイド](../PublicTestingGuide/#2-accessing-snapps)へ戻りましょう。
